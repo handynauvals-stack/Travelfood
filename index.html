@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ngemil — Temukan Kuliner Terbaik</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="logo">🍜 Ngemil</div>
+      <div class="nav-links">
+        <a href="#trending">Trending</a>
+        <a href="#kota">Kota</a>
+        <a href="#tentang">Tentang</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Makan Enak, Di Mana Saja 🗺️</h1>
+    <p>Temukan restoran & makanan trending di kota yang kamu kunjungi.</p>
+
+    <div class="search-box">
+      <input type="text" id="inputKota" placeholder="Cari kota... (mis: Malang, Bali, Jogja)" />
+      <button onclick="cariKota()">Cari</button>
+    </div>
+
+    <div class="kota-cepat">
+      <span>Populer:</span>
+      <button class="chip aktif" onclick="pilihKota('Malang', this)">🌋 Malang</button>
+      <button class="chip" onclick="pilihKota('Bali', this)">🌴 Bali</button>
+      <button class="chip" onclick="pilihKota('Yogyakarta', this)">🏯 Yogyakarta</button>
+      <button class="chip" onclick="pilihKota('Surabaya', this)">🦈 Surabaya</button>
+      <button class="chip" onclick="pilihKota('Jakarta', this)">🏙️ Jakarta</button>
+    </div>
+  </section>
+
+  <!-- INFO KOTA -->
+  <div class="info-kota">
+    <div class="info-inner">
+      <div>
+        <h2>Kuliner di <span id="namaKota">Malang</span></h2>
+        <p id="deskKota">Kota apel yang kaya tradisi kuliner Jawa Timur</p>
+      </div>
+      <div class="stat-kota" id="statKota"></div>
+    </div>
+  </div>
+
+  <!-- TRENDING -->
+  <section class="trending" id="trending">
+    <div class="container">
+      <div class="tabs">
+        <button class="tab aktif" onclick="gantiTab('resto', this)">🍽️ Resto Trending</button>
+        <button class="tab" onclick="gantiTab('makanan', this)">🍲 Makanan Trending</button>
+      </div>
+      <div class="filter-baris" id="filterBaris"></div>
+      <div class="kartu-grid" id="kartuGrid"></div>
+    </div>
+  </section>
+
+  <!-- JELAJAHI KOTA -->
+  <section class="seksi-kota" id="kota">
+    <div class="container">
+      <h2 class="judul-seksi">Jelajahi Kota Lain</h2>
+      <p class="sub-seksi">Pilih kota tujuanmu berikutnya</p>
+      <div class="kota-grid" id="kotaGrid"></div>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section class="tentang" id="tentang">
+    <div class="container">
+      <div class="tentang-isi">
+        <div class="tentang-teks">
+          <h2>Dibuat untuk Para Penjelajah Rasa 🧭</h2>
+          <p>Rating bintang di peta tidak cukup. Kamu butuh tahu: apa yang lagi hype, makanan andalan di sini apa, dan pengalaman nyata dari orang yang sudah ke sana.</p>
+          <div class="fitur-list">
+            <div class="fitur">🔥 <strong>Trending</strong> — berdasarkan ulasan terkini</div>
+            <div class="fitur">📸 <strong>Visual First</strong> — foto makanan & restoran asli</div>
+            <div class="fitur">🗺️ <strong>Ramah Turis</strong> — info lengkap untuk pendatang</div>
+          </div>
+        </div>
+        <div class="tentang-stat">
+          <div class="boks-stat">
+            <div class="angka">50+</div>
+            <div class="label">Kota</div>
+          </div>
+          <div class="boks-stat oranye">
+            <div class="angka">1.2k</div>
+            <div class="label">Restoran</div>
+          </div>
+          <div class="boks-stat kuning">
+            <div class="angka">98%</div>
+            <div class="label">Kepuasan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>🍜 Ngemil &nbsp;|&nbsp; © 2025 Travelfood — Semua Hak Dilindungi Undang-undang</p>
+  </footer>
+
+  <!-- MODAL DETAIL -->
+  <div class="modal-latar" id="modalLatar" onclick="tutupModal(event)">
+    <div class="modal-kotak">
+      <button class="modal-tutup" onclick="tutupModal()">✕</button>
+      <div id="modalIsi"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
