@@ -657,7 +657,7 @@ const fotoKota = {
   Malang: "https://images.unsplash.com/photo-1543470373-e055b73a8f29?w=400&q=80",
   Bali: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=80",
   Yogyakarta: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&q=80",
-  Surabaya: "https://images.unsplash.com/photo-1590674899484-13da0d5449ba?w=400&q=80",
+  Surabaya: "https://discoveringsurabaya.wordpress.com/wp-content/uploads/2015/09/landmark1.jpg",
   Jakarta: "https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=400&q=80"
 };
 
